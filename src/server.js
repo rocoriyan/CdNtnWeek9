@@ -1,14 +1,8 @@
 require("dotenv").config();
 const express = require("express");
 
-const Book = require("./books/model");
-const bookRouter = require("./books/routes");
-
-const Genre = require("./genres/model")
-const genreRouter = require("./genres/routes");
-
-const Author = require("./authors/model")
-const authorRouter = require("./authors/routes");
+const User = require("./users/model");
+const userRouter = require("./users/routes");
 
 const port = process.env.PORT || 5001;
 
