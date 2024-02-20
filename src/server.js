@@ -14,7 +14,7 @@ app.use(userRouter);
 
 //==================== middleware example ==================
 
-const dave = async (...args) => {}; //i dont get the dave name here
+const dave = async (...args) => {};
 
 const sendRes = async (req, res) => {
   res.send({ data: req.body });
