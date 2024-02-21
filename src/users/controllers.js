@@ -24,7 +24,27 @@ const listUsers = async (req,res) => {
     }
 }
 
+const login = async (req, res) => {
+    try {
+        const user = {
+            username: req.user.username,
+            id: req.user.id,
+            //email: req.user.email,
+        };
+        res.status(201).json({ message: `successfully logged in as ${user.username}`, data: user });
+    }
+    catch (error) {
+        res.status(500).json({ message: error.message, error: error });
+    }
+}
+
+const getOneUser = async (req, res) => {
+    res.status(201).json({ message: "login successful", user: req.user });
+}
+
 module.exports = {
     signupUser: signupUser,
-    listUsers: listUsers
+    listUsers: listUsers,
+    login: login,
+    getOneUser: getOneUser,
 };
