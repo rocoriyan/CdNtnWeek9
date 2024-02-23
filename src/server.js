@@ -8,6 +8,10 @@ const port = process.env.PORT || 5001;
 
 const app = express();
 
+//cors for frontend
+app.use(cors);
+//!cors for frontend
+
 app.use(express.json());
 
 app.use(userRouter);
